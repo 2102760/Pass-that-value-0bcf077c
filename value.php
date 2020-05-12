@@ -1,23 +1,26 @@
 <?php
-    function addItemToArray($array, $item){
-        $array[] = $item;
-        return $array;
-    }
 
-    function addItemToArray2(&$array, $item){
-        $array[] = $item;
-    }
+function addItemToArray($array, $item)
+{
+    $array[] = $item;
+    return $array;
+}
 
-    $oldArray = [
-        'value1',
-        'value2'
-    ];
+function addItemToArray2(&$array, $item)
+{
+    $array[] = $item;
+}
 
-    $newArray = addItemToArray($oldArray, 'item');
+$oldArray = [
+    'value1',
+    'value2'
+];
 
-    addItemToArray2($oldArray, 'item2');
+$newArray = addItemToArray($oldArray, 'item');
 
-    var_dump($newArray);
+addItemToArray2($oldArray, 'item2');
 
-    var_dump($oldArray);
+var_dump($newArray);
+
+var_dump($oldArray);
 ?>
